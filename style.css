@@ -1,0 +1,133 @@
+
+
+/* 画面全体の設定 */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* マトリクス全体 */
+.matrix {
+  position: relative;
+  width: 1100px;
+  height: 430px;
+}
+
+/* 縦軸（重要度） */
+.y-axis {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: black;
+}
+
+/* 縦軸の矢印 */
+.y-axis::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 10px solid black;
+}
+
+/* 縦軸ラベル */
+.y-label {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+/* 横軸（優先度） */
+.x-axis {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+
+/* 横軸の矢印 */
+.x-axis::after {
+  content: "";
+  position: absolute;
+  right: -8px;
+  top: -6px;
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 10px solid black;
+}
+
+/* 横軸ラベル */
+.x-label {
+  position: absolute;
+  top: 50%;
+  right: -55px;
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+   /* 4象限のBOX */
+.quadrant {
+  position: absolute;
+  width: 49%;
+  height: 49%;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+/* 各象限の配置と色 */
+.q1 {
+  top: 0%;
+  left: 51%;
+  background: #ffe4e1;
+}
+
+.q2 {
+  top: 0%;
+  left: 0%;
+  background: #e0f7fa;
+}
+
+.q3 {
+  top: 51%;
+  left: 0%;
+  background: #e8f5e9;
+}
+
+.q4 {
+  top: 51%;
+  left: 51%;
+  background: #fff3e0;
+}
+
+/* タスク入力 */
+.task-input {
+  position: fixed;
+  top: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+/* タスク表示 */
+.task {
+  background: white;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* タスク表示ボタン */
+.task button {
+  margin-left: 5px;
+}
