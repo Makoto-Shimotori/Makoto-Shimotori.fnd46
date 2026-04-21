@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+  <title>やることリスト</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+<!-- 入力エリア -->
+<div class="task-input">
+  <input id="taskText" type="text" placeholder="タスク内容">
+  <input id="taskDate" type="date">
+  <select id="taskImportance">
+    <option value="high">重要度：高</option>
+    <option value="low">重要度：低</option>
+  </select>
+  <button id="addTask">追加</button>
+</div>
+
+
+<!-- 4象限設定 -->
+ <div class="matrix">
+
+    <!-- 軸 -->
+    <div class="y-axis"></div>
+    <div class="x-axis"></div>
+
+    <!-- 軸ラベル -->
+    <div class="y-label">重要度</div>
+    <div class="x-label">優先度</div>
+
+    <!-- 4象限 -->
+    <div id="q1" class="quadrant q1">１）すぐやろう！</div>
+    <div id="q2" class="quadrant q2">３）手が空いたらやろう</div>
+    <div id="q3" class="quadrant q3">４）一旦後回し、、、</div>
+    <div id="q4" class="quadrant q4">２）早めに片付けよう！</div>
+
+ </div>
+
+ <script src="script.js"></script>
+</body>
+
+</html>
